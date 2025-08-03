@@ -1,0 +1,42 @@
+services:
+  beszel:
+    image: henrygd/beszel:latest
+    container_name: beszel
+    restart: unless-stopped
+    volumes:
+      - ./volumes/hostdata:/beszel_data
+      - ./config/socket:/beszel_socket
+    networks:
+      - traefik
+    labels:
+      traefik.enable: true
+      traefik.http.routers.beszel.rule: Host(`beszel.69b.place`)
+
+      homepage.group: System
+      homepage.name: Beszel
+      homepage.description: Monitoring
+      homepage.icon: sh-beszel
+      homepage.href: https://beszel.69b.place
+
+  beszel-agent:
+    image: henrygd/beszel-agent:latest
+    container_name: beszel-agent
+    restart: unless-stopped
+    network_mode: host
+    volumes:
+      - ./volumes/agentdata:/var/lib/beszel-agent
+      - ./config/socket:/beszel_socket
+      - /data:/extra-filesystems/data:ro
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    environment:
+      LISTEN: /beszel_socket/beszel.sock
+      HUB_URL: http://localhost:8090
+      TOKEN: ${TOKEN}
+      KEY: ${KEY}
+
+
+networks:
+  traefik:
+    name: traefik 
+    external: true
+
