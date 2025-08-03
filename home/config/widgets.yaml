@@ -1,0 +1,29 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/configs/info-widgets/
+
+- resources:
+    cpu: true
+    memory: true
+    disk: /
+
+- search:
+    provider: google
+    target: _self
+    focus: true
+    showSearchSuggestions: true
+
+- datetime:
+    text_size: xl
+    format:
+      timeStyle: short
+      hourCycle: h23
+
+- openmeteo:
+    latitude: 52.5203142
+    longitude: 13.61257
+    timezone: Europe/Berlin
+    units: metric
+    cache: 5
+    format: # optional, Intl.NumberFormat options
+      maximumFractionDigits: 1

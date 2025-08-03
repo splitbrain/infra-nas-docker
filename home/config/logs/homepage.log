@@ -1,0 +1,367 @@
+[2025-08-01T18:43:23.397Z] info: kubernetes.yaml was copied to the config folder
+[2025-08-01T18:43:33.645Z] info: widgets.yaml was copied to the config folder
+[2025-08-01T18:43:33.659Z] info: docker.yaml was copied to the config folder
+[2025-08-01T18:43:33.663Z] info: services.yaml was copied to the config folder
+[2025-08-01T18:43:33.664Z] info: bookmarks.yaml was copied to the config folder
+[2025-08-01T18:43:33.664Z] info: proxmox.yaml was copied to the config folder
+[2025-08-01T18:43:33.680Z] info: custom.css was copied to the config folder
+[2025-08-01T18:43:33.680Z] info: custom.js was copied to the config folder
+[2025-08-01T18:59:05.100Z] error: Failed to load services.yaml, please check for errors
+[2025-08-01T18:59:05.101Z] error: TypeError: Cannot read properties of null (reading 'forEach')
+[2025-08-01T18:59:05.102Z] error: Failed to load services.yaml, please check for errors
+[2025-08-01T18:59:05.102Z] error: TypeError: Cannot read properties of null (reading 'forEach')
+[2025-08-01T18:59:05.275Z] error: Failed to load services.yaml, please check for errors
+[2025-08-01T18:59:05.275Z] error: TypeError: Cannot read properties of null (reading 'forEach')
+[2025-08-01T19:00:00.862Z] error: Failed to load services.yaml, please check for errors
+[2025-08-01T19:00:00.862Z] error: TypeError: Cannot read properties of null (reading 'forEach')
+[2025-08-01T19:00:00.928Z] error: Failed to load services.yaml, please check for errors
+[2025-08-01T19:00:00.928Z] error: TypeError: Cannot read properties of null (reading 'forEach')
+[2025-08-01T19:00:01.128Z] error: Failed to load services.yaml, please check for errors
+[2025-08-01T19:00:01.128Z] error: TypeError: Cannot read properties of null (reading 'forEach')
+[2025-08-01T19:00:31.114Z] error: Failed to load services.yaml, please check for errors
+[2025-08-01T19:00:31.114Z] error: TypeError: Cannot read properties of null (reading 'forEach')
+[2025-08-01T19:01:08.883Z] error: Failed to load services.yaml, please check for errors
+[2025-08-01T19:01:08.883Z] error: TypeError: Cannot read properties of null (reading 'forEach')
+[2025-08-01T19:01:14.013Z] error: Failed to load services.yaml, please check for errors
+[2025-08-01T19:01:14.013Z] error: TypeError: Cannot read properties of null (reading 'forEach')
+[2025-08-01T19:01:50.177Z] error: Failed to load services.yaml, please check for errors
+[2025-08-01T19:01:50.177Z] error: TypeError: Cannot read properties of null (reading 'forEach')
+[2025-08-01T19:02:47.776Z] error: Failed to load services.yaml, please check for errors
+[2025-08-01T19:02:47.777Z] error: TypeError: Cannot read properties of null (reading 'forEach')
+[2025-08-01T19:03:06.566Z] error: Failed to load services.yaml, please check for errors
+[2025-08-01T19:03:06.566Z] error: TypeError: Cannot read properties of null (reading 'forEach')
+[2025-08-01T19:07:02.801Z] error: Failed to load services.yaml, please check for errors
+[2025-08-01T19:07:02.802Z] error: TypeError: Cannot read properties of null (reading 'forEach')
+[2025-08-01T19:11:01.462Z] error: Failed to load services.yaml, please check for errors
+[2025-08-01T19:11:01.462Z] error: TypeError: Cannot read properties of null (reading 'forEach')
+[2025-08-01T19:12:09.859Z] error: Failed to load services.yaml, please check for errors
+[2025-08-01T19:12:09.859Z] error: TypeError: Cannot read properties of null (reading 'forEach')
+[2025-08-01T19:14:05.841Z] error: Failed to load services.yaml, please check for errors
+[2025-08-01T19:14:05.841Z] error: TypeError: Cannot read properties of null (reading 'forEach')
+[2025-08-01T19:14:07.749Z] error: Failed to load services.yaml, please check for errors
+[2025-08-01T19:14:07.749Z] error: TypeError: Cannot read properties of null (reading 'forEach')
+[2025-08-01T19:15:41.891Z] error: Failed to load services.yaml, please check for errors
+[2025-08-01T19:15:41.892Z] error: TypeError: Cannot read properties of null (reading 'forEach')
+[2025-08-01T19:15:56.373Z] error: Failed to load services.yaml, please check for errors
+[2025-08-01T19:15:56.373Z] error: TypeError: Cannot read properties of null (reading 'forEach')
+[2025-08-01T19:20:31.523Z] error: Failed to load services.yaml, please check for errors
+[2025-08-01T19:20:31.523Z] error: TypeError: Cannot read properties of null (reading 'forEach')
+[2025-08-01T19:21:28.271Z] error: Failed to load services.yaml, please check for errors
+[2025-08-01T19:21:28.271Z] error: TypeError: Cannot read properties of null (reading 'forEach')
+[2025-08-01T19:21:28.275Z] error: Failed to load services.yaml, please check for errors
+[2025-08-01T19:21:28.275Z] error: TypeError: Cannot read properties of null (reading 'forEach')
+[2025-08-01T19:21:28.790Z] error: Failed to load services.yaml, please check for errors
+[2025-08-01T19:21:28.790Z] error: TypeError: Cannot read properties of null (reading 'forEach')
+[2025-08-01T19:23:05.540Z] error: Failed to load services.yaml, please check for errors
+[2025-08-01T19:23:05.540Z] error: TypeError: Cannot read properties of null (reading 'forEach')
+[2025-08-01T19:23:05.549Z] error: Failed to load services.yaml, please check for errors
+[2025-08-01T19:23:05.549Z] error: TypeError: Cannot read properties of null (reading 'forEach')
+[2025-08-01T19:23:06.122Z] error: Failed to load services.yaml, please check for errors
+[2025-08-01T19:23:06.123Z] error: TypeError: Cannot read properties of null (reading 'forEach')
+[2025-08-01T19:24:03.614Z] error: Failed to load services.yaml, please check for errors
+[2025-08-01T19:24:03.615Z] error: TypeError: Cannot read properties of null (reading 'forEach')
+[2025-08-01T19:24:31.174Z] error: Failed to load services.yaml, please check for errors
+[2025-08-01T19:24:31.174Z] error: TypeError: Cannot read properties of null (reading 'forEach')
+[2025-08-01T19:24:31.221Z] error: <servicesProxy> TypeError: Cannot read properties of null (reading 'forEach')
+    at /app/.next/server/chunks/7325.js:1:5328
+    at Array.map (<anonymous>)
+    at e (/app/.next/server/chunks/7325.js:1:5274)
+    at y (/app/.next/server/chunks/7325.js:1:5643)
+    at async b (/app/.next/server/chunks/7325.js:1:7731)
+    at async A (/app/.next/server/chunks/7325.js:1:8010)
+    at async u (/app/.next/server/pages/api/services/proxy.js:25:31132)
+    at async X (/app/node_modules/.pnpm/next@15.3.1_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/compiled/next-server/pages-api.runtime.prod.js:20:18441)
+    at async z.render (/app/node_modules/.pnpm/next@15.3.1_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/compiled/next-server/pages-api.runtime.prod.js:20:19237)
+    at async NextNodeServer.runApi (/app/node_modules/.pnpm/next@15.3.1_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/next-server.js:671:9)
+[2025-08-01T19:25:56.691Z] error: Failed to load services.yaml, please check for errors
+[2025-08-01T19:25:56.691Z] error: TypeError: Cannot read properties of null (reading 'forEach')
+[2025-08-01T19:25:56.705Z] error: <servicesProxy> TypeError: Cannot read properties of null (reading 'forEach')
+    at /app/.next/server/chunks/7325.js:1:5328
+    at Array.map (<anonymous>)
+    at e (/app/.next/server/chunks/7325.js:1:5274)
+    at y (/app/.next/server/chunks/7325.js:1:5643)
+    at async b (/app/.next/server/chunks/7325.js:1:7731)
+    at async A (/app/.next/server/chunks/7325.js:1:8010)
+    at async u (/app/.next/server/pages/api/services/proxy.js:25:31132)
+    at async X (/app/node_modules/.pnpm/next@15.3.1_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/compiled/next-server/pages-api.runtime.prod.js:20:18441)
+    at async z.render (/app/node_modules/.pnpm/next@15.3.1_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/compiled/next-server/pages-api.runtime.prod.js:20:19237)
+    at async NextNodeServer.runApi (/app/node_modules/.pnpm/next@15.3.1_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/next-server.js:671:9)
+[2025-08-01T19:25:58.264Z] error: Failed to load services.yaml, please check for errors
+[2025-08-01T19:25:58.265Z] error: TypeError: Cannot read properties of null (reading 'forEach')
+[2025-08-01T19:25:58.452Z] error: <servicesProxy> TypeError: Cannot read properties of null (reading 'forEach')
+    at /app/.next/server/chunks/7325.js:1:5328
+    at Array.map (<anonymous>)
+    at e (/app/.next/server/chunks/7325.js:1:5274)
+    at y (/app/.next/server/chunks/7325.js:1:5643)
+    at async b (/app/.next/server/chunks/7325.js:1:7731)
+    at async A (/app/.next/server/chunks/7325.js:1:8010)
+    at async u (/app/.next/server/pages/api/services/proxy.js:25:31132)
+    at async X (/app/node_modules/.pnpm/next@15.3.1_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/compiled/next-server/pages-api.runtime.prod.js:20:18441)
+    at async z.render (/app/node_modules/.pnpm/next@15.3.1_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/compiled/next-server/pages-api.runtime.prod.js:20:19237)
+    at async NextNodeServer.runApi (/app/node_modules/.pnpm/next@15.3.1_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/next-server.js:671:9)
+[2025-08-01T19:26:46.668Z] error: Failed to load services.yaml, please check for errors
+[2025-08-01T19:26:46.668Z] error: TypeError: Cannot read properties of null (reading 'forEach')
+[2025-08-01T19:26:46.680Z] error: <servicesProxy> TypeError: Cannot read properties of null (reading 'forEach')
+    at /app/.next/server/chunks/7325.js:1:5328
+    at Array.map (<anonymous>)
+    at e (/app/.next/server/chunks/7325.js:1:5274)
+    at y (/app/.next/server/chunks/7325.js:1:5643)
+    at async b (/app/.next/server/chunks/7325.js:1:7731)
+    at async A (/app/.next/server/chunks/7325.js:1:8010)
+    at async u (/app/.next/server/pages/api/services/proxy.js:25:31132)
+    at async X (/app/node_modules/.pnpm/next@15.3.1_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/compiled/next-server/pages-api.runtime.prod.js:20:18441)
+    at async z.render (/app/node_modules/.pnpm/next@15.3.1_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/compiled/next-server/pages-api.runtime.prod.js:20:19237)
+    at async NextNodeServer.runApi (/app/node_modules/.pnpm/next@15.3.1_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/next-server.js:671:9)
+[2025-08-01T19:26:48.644Z] error: Failed to load services.yaml, please check for errors
+[2025-08-01T19:26:48.644Z] error: TypeError: Cannot read properties of null (reading 'forEach')
+[2025-08-01T19:26:48.806Z] error: <servicesProxy> TypeError: Cannot read properties of null (reading 'forEach')
+    at /app/.next/server/chunks/7325.js:1:5328
+    at Array.map (<anonymous>)
+    at e (/app/.next/server/chunks/7325.js:1:5274)
+    at y (/app/.next/server/chunks/7325.js:1:5643)
+    at async b (/app/.next/server/chunks/7325.js:1:7731)
+    at async A (/app/.next/server/chunks/7325.js:1:8010)
+    at async u (/app/.next/server/pages/api/services/proxy.js:25:31132)
+    at async X (/app/node_modules/.pnpm/next@15.3.1_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/compiled/next-server/pages-api.runtime.prod.js:20:18441)
+    at async z.render (/app/node_modules/.pnpm/next@15.3.1_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/compiled/next-server/pages-api.runtime.prod.js:20:19237)
+    at async NextNodeServer.runApi (/app/node_modules/.pnpm/next@15.3.1_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/next/dist/server/next-server.js:671:9)
+[2025-08-01T19:32:40.900Z] error: <httpProxy> Error calling https://traefik.69b.place/api/overview...
+[2025-08-01T19:32:40.905Z] error: <httpProxy> [
+  500,
+  Error: connect ETIMEDOUT 192.168.1.33:443
+      at <unknown> (Error: connect ETIMEDOUT 192.168.1.33:443) {
+    errno: -110,
+    code: 'ETIMEDOUT',
+    syscall: 'connect',
+    address: '192.168.1.33',
+    port: 443
+  }
+]
+[2025-08-01T19:32:40.905Z] error: <httpProxy> Error calling https://traefik.69b.place/api/overview...
+[2025-08-01T19:32:40.906Z] error: <httpProxy> [
+  500,
+  Error: connect ETIMEDOUT 192.168.1.33:443
+      at <unknown> (Error: connect ETIMEDOUT 192.168.1.33:443) {
+    errno: -110,
+    code: 'ETIMEDOUT',
+    syscall: 'connect',
+    address: '192.168.1.33',
+    port: 443
+  }
+]
+[2025-08-01T19:33:21.857Z] error: <httpProxy> Error calling https://traefik.69b.place/api/overview...
+[2025-08-01T19:33:21.860Z] error: <httpProxy> [
+  500,
+  Error: connect ETIMEDOUT 192.168.1.33:443
+      at <unknown> (Error: connect ETIMEDOUT 192.168.1.33:443) {
+    errno: -110,
+    code: 'ETIMEDOUT',
+    syscall: 'connect',
+    address: '192.168.1.33',
+    port: 443
+  }
+]
+[2025-08-01T19:33:42.337Z] error: <httpProxy> Error calling https://traefik.69b.place/api/overview...
+[2025-08-01T19:33:42.340Z] error: <httpProxy> [
+  500,
+  Error: connect ETIMEDOUT 192.168.1.33:443
+      at <unknown> (Error: connect ETIMEDOUT 192.168.1.33:443) {
+    errno: -110,
+    code: 'ETIMEDOUT',
+    syscall: 'connect',
+    address: '192.168.1.33',
+    port: 443
+  }
+]
+[2025-08-01T19:33:46.432Z] error: <httpProxy> Error calling https://traefik.69b.place/api/overview...
+[2025-08-01T19:33:46.435Z] error: <httpProxy> [
+  500,
+  Error: connect ETIMEDOUT 192.168.1.33:443
+      at <unknown> (Error: connect ETIMEDOUT 192.168.1.33:443) {
+    errno: -110,
+    code: 'ETIMEDOUT',
+    syscall: 'connect',
+    address: '192.168.1.33',
+    port: 443
+  }
+]
+[2025-08-01T19:36:58.944Z] error: <httpProxy> Error calling https://traefik.69b.place/api/overview...
+[2025-08-01T19:36:58.945Z] error: <httpProxy> [
+  500,
+  Error: connect ETIMEDOUT 192.168.1.33:443
+      at <unknown> (Error: connect ETIMEDOUT 192.168.1.33:443) {
+    errno: -110,
+    code: 'ETIMEDOUT',
+    syscall: 'connect',
+    address: '192.168.1.33',
+    port: 443
+  }
+]
+[2025-08-01T19:38:44.350Z] error: <httpProxy> Error calling http://traefik/api/overview...
+[2025-08-01T19:38:44.352Z] error: <httpProxy> [
+  500,
+  [Error [ERR_FR_REDIRECTION_FAILURE]: Redirected request failed: Protocol "https:" not supported. Expected "http:"] {
+    code: 'ERR_FR_REDIRECTION_FAILURE',
+    [cause]: [TypeError: Protocol "https:" not supported. Expected "http:"] {
+      code: 'ERR_INVALID_PROTOCOL'
+    }
+  }
+]
+[2025-08-01T19:38:46.512Z] error: <httpProxy> Error calling http://traefik/api/overview...
+[2025-08-01T19:38:46.513Z] error: <httpProxy> [
+  500,
+  [Error [ERR_FR_REDIRECTION_FAILURE]: Redirected request failed: Protocol "https:" not supported. Expected "http:"] {
+    code: 'ERR_FR_REDIRECTION_FAILURE',
+    [cause]: [TypeError: Protocol "https:" not supported. Expected "http:"] {
+      code: 'ERR_INVALID_PROTOCOL'
+    }
+  }
+]
+[2025-08-01T19:39:30.496Z] error: <httpProxy> Error calling http://traefik.69b.place/api/overview...
+[2025-08-01T19:39:30.499Z] error: <httpProxy> [
+  500,
+  Error: connect ETIMEDOUT 192.168.1.33:80
+      at <unknown> (Error: connect ETIMEDOUT 192.168.1.33:80) {
+    errno: -110,
+    code: 'ETIMEDOUT',
+    syscall: 'connect',
+    address: '192.168.1.33',
+    port: 80
+  }
+]
+[2025-08-01T19:39:34.593Z] error: <httpProxy> Error calling http://traefik.69b.place/api/overview...
+[2025-08-01T19:39:34.595Z] error: <httpProxy> [
+  500,
+  Error: connect ETIMEDOUT 192.168.1.33:80
+      at <unknown> (Error: connect ETIMEDOUT 192.168.1.33:80) {
+    errno: -110,
+    code: 'ETIMEDOUT',
+    syscall: 'connect',
+    address: '192.168.1.33',
+    port: 80
+  }
+]
+[2025-08-01T19:40:00.959Z] error: <httpProxy> Error calling http://traefik/api/overview...
+[2025-08-01T19:40:00.961Z] error: <httpProxy> [
+  500,
+  [Error [ERR_FR_REDIRECTION_FAILURE]: Redirected request failed: Protocol "https:" not supported. Expected "http:"] {
+    code: 'ERR_FR_REDIRECTION_FAILURE',
+    [cause]: [TypeError: Protocol "https:" not supported. Expected "http:"] {
+      code: 'ERR_INVALID_PROTOCOL'
+    }
+  }
+]
+[2025-08-01T19:40:10.646Z] error: <httpProxy> Error calling http://traefik/api/overview...
+[2025-08-01T19:40:10.647Z] error: <httpProxy> [
+  500,
+  [Error [ERR_FR_REDIRECTION_FAILURE]: Redirected request failed: Protocol "https:" not supported. Expected "http:"] {
+    code: 'ERR_FR_REDIRECTION_FAILURE',
+    [cause]: [TypeError: Protocol "https:" not supported. Expected "http:"] {
+      code: 'ERR_INVALID_PROTOCOL'
+    }
+  }
+]
+[2025-08-01T19:40:24.280Z] error: <httpProxy> Error calling http://traefik/api/overview...
+[2025-08-01T19:40:24.282Z] error: <httpProxy> [
+  500,
+  [Error [ERR_FR_REDIRECTION_FAILURE]: Redirected request failed: Protocol "https:" not supported. Expected "http:"] {
+    code: 'ERR_FR_REDIRECTION_FAILURE',
+    [cause]: [TypeError: Protocol "https:" not supported. Expected "http:"] {
+      code: 'ERR_INVALID_PROTOCOL'
+    }
+  }
+]
+[2025-08-01T19:46:58.808Z] error: <servicesProxy> YAMLException: bad indentation of a sequence entry (6:18)
+
+ 3 | # https://gethomepage.dev/configs/services/
+ 4 | 
+ 5 | - Home
+ 6 |   - HomeAssistant:
+----------------------^
+ 7 |     href: http://192.168.1.19:8123/
+    at generateError (file:///app/node_modules/.pnpm/js-yaml@4.1.0/node_modules/js-yaml/dist/js-yaml.mjs:1273:10)
+    at throwError (file:///app/node_modules/.pnpm/js-yaml@4.1.0/node_modules/js-yaml/dist/js-yaml.mjs:1277:9)
+    at readBlockSequence (file:///app/node_modules/.pnpm/js-yaml@4.1.0/node_modules/js-yaml/dist/js-yaml.mjs:2105:7)
+    at composeNode (file:///app/node_modules/.pnpm/js-yaml@4.1.0/node_modules/js-yaml/dist/js-yaml.mjs:2530:12)
+    at readDocument (file:///app/node_modules/.pnpm/js-yaml@4.1.0/node_modules/js-yaml/dist/js-yaml.mjs:2715:3)
+    at loadDocuments (file:///app/node_modules/.pnpm/js-yaml@4.1.0/node_modules/js-yaml/dist/js-yaml.mjs:2778:5)
+    at Object.load$1 [as load] (file:///app/node_modules/.pnpm/js-yaml@4.1.0/node_modules/js-yaml/dist/js-yaml.mjs:2804:19)
+    at y (/app/.next/server/chunks/7325.js:1:5234)
+    at async b (/app/.next/server/chunks/7325.js:1:7731)
+    at async A (/app/.next/server/chunks/7325.js:1:8010)
+[2025-08-01T19:46:58.848Z] error: Failed to load services.yaml, please check for errors
+[2025-08-01T19:46:58.849Z] error: YAMLException: bad indentation of a sequence entry (6:18)
+
+ 3 | # https://gethomepage.dev/configs/services/
+ 4 | 
+ 5 | - Home
+ 6 |   - HomeAssistant:
+----------------------^
+ 7 |     href: http://192.168.1.19:8123/
+[2025-08-01T19:46:58.926Z] error: Failed to load services.yaml, please check for errors
+[2025-08-01T19:46:58.926Z] error: YAMLException: bad indentation of a sequence entry (6:18)
+
+ 3 | # https://gethomepage.dev/configs/services/
+ 4 | 
+ 5 | - Home
+ 6 |   - HomeAssistant:
+----------------------^
+ 7 |     href: http://192.168.1.19:8123/
+[2025-08-01T19:46:59.424Z] error: <servicesProxy> YAMLException: bad indentation of a sequence entry (6:18)
+
+ 3 | # https://gethomepage.dev/configs/services/
+ 4 | 
+ 5 | - Home
+ 6 |   - HomeAssistant:
+----------------------^
+ 7 |     href: http://192.168.1.19:8123/
+    at generateError (file:///app/node_modules/.pnpm/js-yaml@4.1.0/node_modules/js-yaml/dist/js-yaml.mjs:1273:10)
+    at throwError (file:///app/node_modules/.pnpm/js-yaml@4.1.0/node_modules/js-yaml/dist/js-yaml.mjs:1277:9)
+    at readBlockSequence (file:///app/node_modules/.pnpm/js-yaml@4.1.0/node_modules/js-yaml/dist/js-yaml.mjs:2105:7)
+    at composeNode (file:///app/node_modules/.pnpm/js-yaml@4.1.0/node_modules/js-yaml/dist/js-yaml.mjs:2530:12)
+    at readDocument (file:///app/node_modules/.pnpm/js-yaml@4.1.0/node_modules/js-yaml/dist/js-yaml.mjs:2715:3)
+    at loadDocuments (file:///app/node_modules/.pnpm/js-yaml@4.1.0/node_modules/js-yaml/dist/js-yaml.mjs:2778:5)
+    at Object.load$1 [as load] (file:///app/node_modules/.pnpm/js-yaml@4.1.0/node_modules/js-yaml/dist/js-yaml.mjs:2804:19)
+    at y (/app/.next/server/chunks/7325.js:1:5234)
+    at async b (/app/.next/server/chunks/7325.js:1:7731)
+    at async A (/app/.next/server/chunks/7325.js:1:8010)
+[2025-08-01T19:46:59.440Z] error: Failed to load services.yaml, please check for errors
+[2025-08-01T19:46:59.440Z] error: YAMLException: bad indentation of a sequence entry (6:18)
+
+ 3 | # https://gethomepage.dev/configs/services/
+ 4 | 
+ 5 | - Home
+ 6 |   - HomeAssistant:
+----------------------^
+ 7 |     href: http://192.168.1.19:8123/
+[2025-08-01T19:47:17.829Z] warn: <service-helpers> Error parsing service "HomeAssistant" from config. Ensure required fields are present.
+[2025-08-01T19:47:18.317Z] warn: <service-helpers> Error parsing service "HomeAssistant" from config. Ensure required fields are present.
+[2025-08-01T19:47:18.324Z] warn: <service-helpers> Error parsing service "HomeAssistant" from config. Ensure required fields are present.
+[2025-08-01T19:47:18.328Z] warn: <service-helpers> Error parsing service "HomeAssistant" from config. Ensure required fields are present.
+[2025-08-01T19:47:53.239Z] warn: <service-helpers> Error parsing service "HomeAssistant" from config. Ensure required fields are present.
+[2025-08-01T19:47:53.286Z] warn: <service-helpers> Error parsing service "HomeAssistant" from config. Ensure required fields are present.
+[2025-08-01T19:47:53.287Z] warn: <service-helpers> Error parsing service "HomeAssistant" from config. Ensure required fields are present.
+[2025-08-01T19:47:53.288Z] warn: <service-helpers> Error parsing service "HomeAssistant" from config. Ensure required fields are present.
+[2025-08-01T19:47:53.740Z] warn: <service-helpers> Error parsing service "HomeAssistant" from config. Ensure required fields are present.
+[2025-08-01T19:47:53.756Z] warn: <service-helpers> Error parsing service "HomeAssistant" from config. Ensure required fields are present.
+[2025-08-01T19:47:53.758Z] warn: <service-helpers> Error parsing service "HomeAssistant" from config. Ensure required fields are present.
+[2025-08-01T19:48:09.680Z] warn: <service-helpers> Error parsing service "HomeAssistant" from config. Ensure required fields are present.
+[2025-08-01T19:48:09.711Z] warn: <service-helpers> Error parsing service "HomeAssistant" from config. Ensure required fields are present.
+[2025-08-01T19:48:09.712Z] warn: <service-helpers> Error parsing service "HomeAssistant" from config. Ensure required fields are present.
+[2025-08-01T19:48:16.311Z] warn: <service-helpers> Error parsing service "HomeAssistant" from config. Ensure required fields are present.
+[2025-08-01T19:48:16.312Z] warn: <service-helpers> Error parsing service "HomeAssistant" from config. Ensure required fields are present.
+[2025-08-01T19:48:16.326Z] warn: <service-helpers> Error parsing service "HomeAssistant" from config. Ensure required fields are present.
+[2025-08-01T19:50:01.487Z] warn: <service-helpers> Error parsing service "HomeAssistant" from config. Ensure required fields are present.
+[2025-08-01T19:50:01.498Z] warn: <service-helpers> Error parsing service "HomeAssistant" from config. Ensure required fields are present.
+[2025-08-01T19:50:01.499Z] warn: <service-helpers> Error parsing service "HomeAssistant" from config. Ensure required fields are present.
+[2025-08-01T19:50:01.517Z] warn: <service-helpers> Error parsing service "HomeAssistant" from config. Ensure required fields are present.
+[2025-08-01T19:50:01.746Z] warn: <service-helpers> Error parsing service "HomeAssistant" from config. Ensure required fields are present.
+[2025-08-01T19:50:01.764Z] warn: <service-helpers> Error parsing service "HomeAssistant" from config. Ensure required fields are present.
+[2025-08-01T19:50:01.772Z] warn: <service-helpers> Error parsing service "HomeAssistant" from config. Ensure required fields are present.
+[2025-08-01T19:51:02.106Z] warn: <service-helpers> Error parsing service "HomeAssistant" from config. Ensure required fields are present.
+[2025-08-01T19:51:02.111Z] warn: <service-helpers> Error parsing service "HomeAssistant" from config. Ensure required fields are present.
+[2025-08-01T19:51:02.129Z] warn: <service-helpers> Error parsing service "HomeAssistant" from config. Ensure required fields are present.
+[2025-08-01T19:51:02.136Z] warn: <service-helpers> Error parsing service "HomeAssistant" from config. Ensure required fields are present.
+[2025-08-01T19:51:02.317Z] warn: <service-helpers> Error parsing service "HomeAssistant" from config. Ensure required fields are present.
+[2025-08-01T19:51:02.342Z] warn: <service-helpers> Error parsing service "HomeAssistant" from config. Ensure required fields are present.
+[2025-08-01T19:51:02.343Z] warn: <service-helpers> Error parsing service "HomeAssistant" from config. Ensure required fields are present.

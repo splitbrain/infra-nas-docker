@@ -1,0 +1,21 @@
+services:
+  homepage:
+    image: ghcr.io/gethomepage/homepage:latest
+    container_name: homepage
+    volumes:
+      - ./config:/app/config
+      - /var/run/docker.sock:/var/run/docker.sock # (optional) For docker integrations
+    environment:
+      HOMEPAGE_ALLOWED_HOSTS: home.69b.place
+    networks:
+      - traefik
+
+    labels:
+      traefik.enable: true
+      traefik.http.routers.home.rule: Host(`home.69b.place`)
+
+
+networks:
+  traefik:
+    name: traefik
+    external: true

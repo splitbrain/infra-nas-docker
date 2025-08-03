@@ -1,0 +1,15 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/configs/services/
+
+
+- Home:
+    - HomeAssistant:
+        icon: sh-home-assistant.svg
+        href: http://192.168.1.19:8123/
+        description: Home Automation
+    - Reolink:
+        icon: sh-reolink.svg
+        href: https://reolink.fritz.box/
+        description: Camera NVR
+
