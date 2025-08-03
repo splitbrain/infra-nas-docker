@@ -1,0 +1,30 @@
+services:
+  openwebui:
+    container_name: openwebui
+    image: ghcr.io/open-webui/open-webui:main
+    restart: unless-stopped
+
+    environment:
+      OPENAI_API_KEY: ${OPENAI_API_KEY}
+      
+    volumes:
+      - ./volumes/data:/app/backend/data
+
+    networks:
+      - traefik
+
+    labels:
+      traefik.enable: true
+      traefik.http.routers.openwebui.rule: Host(`openwebui.69b.place`)
+
+      homepage.group: Tools
+      homepage.name: OpenWebUi
+      homepage.description: LLM Chat
+      homepage.icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/open-webui-light.svg
+      homepage.href: https://openwebui.69b.place
+
+networks:
+  traefik:
+    name: traefik 
+    external: true
+
