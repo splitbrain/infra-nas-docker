@@ -1,0 +1,46 @@
+services:
+  recorder:
+    image: owntracks/recorder
+    restart: unless-stopped
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - ./volumes/storage:/store
+      - ./volumes/config:/config
+    environment:
+      - OTR_PORT=0  # disables MQTT
+    networks:
+      - traefik
+    labels:
+      traefik.enable: true
+      traefik.http.routers.owntracksrecorder.rule: Host(`otrecorder.69b.place`)
+
+      homepage.group: Tools
+      homepage.name: OwnTracks Recorder
+      homepage.description: Access to the raw recording data
+      homepage.icon: sh-owntracks.svg
+      homepage.href: https://otrecorder.69b.place
+
+
+  frontend:
+    image: owntracks/frontend
+    restart: unless-stopped
+    environment:
+      SERVER_HOST: recorder
+      SERVER_PORT: 8083
+    networks:
+      - traefik
+    labels:
+      traefik.enable: true
+      traefik.http.routers.owntracksfrontend.rule: Host(`owntracks.69b.place`)
+
+      homepage.group: Tools
+      homepage.name: Owntracks Frontend
+      homepage.description: Mapview on the recording data
+      homepage.icon: sh-owntracks.svg
+      homepage.href: https://owntracks.69b.place
+
+
+networks:
+  traefik:
+    name: traefik
+    external: true
