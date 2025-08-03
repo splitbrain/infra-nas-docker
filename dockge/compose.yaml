@@ -1,0 +1,27 @@
+services:
+  dockge:
+    image: louislam/dockge:1
+    restart: unless-stopped
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./volumes/data:/app/data
+      - /data/docker/:/data/docker/
+    environment:
+      DOCKGE_STACKS_DIR: /data/docker/
+    networks:
+      - traefik
+    labels:
+      traefik.enable: true
+      traefik.http.routers.dockge.rule: Host(`dockge.69b.place`)
+
+      homepage.group: System
+      homepage.name: Dockge
+      homepage.description: Manage Docker Compose Stacks
+      homepage.icon: sh-dockge.svg
+      homepage.href: https://dockge.69b.place
+  
+networks:
+  traefik:
+    name: traefik
+    external: true
+
