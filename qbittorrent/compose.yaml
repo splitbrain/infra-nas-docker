@@ -1,0 +1,35 @@
+services:
+  qbittorrent:
+    image: lscr.io/linuxserver/qbittorrent:latest
+    container_name: qbittorrent
+    restart: unless-stopped
+    user: 1000:100
+    environment:
+      - PUID=1000
+      - PGID=100
+      - TZ=Europe/Berlin
+      - WEBUI_PORT=8080
+      - TORRENTING_PORT=51413
+    volumes:
+      - ./volumes/config:/config
+      - /data/other/_incoming:/downloads
+    ports:
+      - 51413:51413 # Torrent port (TCP)
+      - 51413:51413/udp # Torrent port (UDP)
+    networks:
+      - traefik
+    labels:
+      traefik.enable: true
+      traefik.http.routers.qbittorrent.rule: Host(`qbittorrent.69b.place`)
+      traefik.http.services.qbittorrent.loadbalancer.server.port: 8080
+
+      homepage.group: Tools
+      homepage.name: qBittorrent
+      homepage.description: Bittorrent Client
+      homepage.icon: sh-qbittorrent
+      homepage.href: https://qbittorrent.69b.place
+
+networks:
+  traefik:
+    name: traefik
+    external: true
