@@ -1,0 +1,13 @@
+services:
+  rclone:
+    image: rclone/rclone
+    container_name: rclone
+    restart: unless-stopped
+    entrypoint: /root/bin/sync.sh # our own script
+    volumes:
+      - ./volumes/config:/config/rclone
+      - ./volumes/cache:/root/.cache/rclone
+      - /home/andi/documents:/data/andi
+      - /home/kaddi/documents:/data/kaddi
+      - ./bin:/root/bin
+
