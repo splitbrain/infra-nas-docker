@@ -1,0 +1,21 @@
+services:
+  gerbera:
+    image: gerbera/gerbera
+    container_name: gerbera
+    network_mode: host # for multicast -> opens 49494/tcp(WebUI) and 1900/udp
+    volumes:
+      - ./volumes/config:/var/run/gerbera
+      - /data/video:/mnt/content/video:ro
+      - /data/music:/mnt/content/music:ro
+      - /data/photo:/mnt/content/photo:ro
+    environment:
+      UID: 1000
+      GID: 100
+
+    labels:
+      homepage.group: System
+      homepage.name: Gerbera
+      homepage.description: UPNP Media Server
+      homepage.icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/gerbera.svg
+      homepage.href: https://gerbera.69b.place
+

@@ -1,0 +1,13 @@
+http:
+  routers:
+    gerbera:
+      rule: Host(`gerbera.69b.place`)
+      service: gerbera
+      entryPoints: [web, websecure]
+      tls:
+        certResolver: letsencrypt
+  services:
+    gerbera:
+      loadBalancer:
+        servers:
+          - url: "http://192.168.1.33:49494"

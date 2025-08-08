@@ -13,15 +13,19 @@ services:
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - /var/run/docker.sock:/var/run/docker.sock:ro
-      - .volumes/data:/traefik
+      - ./volumes/data:/traefik
+      - ./config/dynamic:/etc/traefik/dynamic
     command:
       - "--api=true"
       - "--api.dashboard=true"
       - "--api.insecure=true"
       - "--serversTransport.insecureSkipVerify=true"
+      - "--log.level=DEBUG"
       - "--providers.docker=true"
       - "--providers.docker.network=proxy"
       - "--providers.docker.exposedbydefault=false"
+      - "--providers.file.directory=/etc/traefik/dynamic"
+      - "--providers.file.watch=true"
       - "--entrypoints.web.address=:80"
       - "--entrypoints.web.http.redirections.entrypoint.to=websecure"
       - "--entrypoints.web.http.redirections.entrypoint.scheme=https"
