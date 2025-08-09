@@ -2,6 +2,7 @@ services:
   gerbera:
     image: gerbera/gerbera
     container_name: gerbera
+    restart: unless-stopped
     network_mode: host # for multicast -> opens 49494/tcp(WebUI) and 1900/udp
     volumes:
       - ./volumes/config:/var/run/gerbera
