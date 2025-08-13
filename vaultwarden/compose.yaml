@@ -1,0 +1,27 @@
+services:
+  vaultwarden:
+    image: vaultwarden/server:latest
+    container_name: vaultwarden
+    restart: unless-stopped
+    environment:
+      DOMAIN: "https://vaultwarden.69b.place"
+      SIGNUPS_ALLOWED: "true"
+    volumes:
+      - ./volumes/data:/data
+    networks:
+      - traefik
+    labels:
+      traefik.enable: true
+      traefik.http.routers.vaultwarden.rule: Host(`vaultwarden.69b.place`)
+      traefik.http.services.vaultwarden.loadbalancer.server.port: 80
+
+      homepage.group: Tools
+      homepage.name: Vaultwarden
+      homepage.description: Password Manager
+      homepage.icon: sh-vaultwarden
+      homepage.href: https://vaultwarden.69b.place
+
+networks:
+  traefik:
+    name: traefik
+    external: true
