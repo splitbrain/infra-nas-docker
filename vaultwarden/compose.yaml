@@ -5,7 +5,7 @@ services:
     restart: unless-stopped
     environment:
       DOMAIN: "https://vaultwarden.69b.place"
-      SIGNUPS_ALLOWED: "true"
+      SIGNUPS_ALLOWED: "false"
     volumes:
       - ./volumes/data:/data
     networks:
