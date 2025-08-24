@@ -1,0 +1,19 @@
+services:
+  borgmatic:
+    image: ghcr.io/borgmatic-collective/borgmatic:2
+    container_name: borgmatic
+    restart: unless-stopped
+    volumes:
+      # mount folders to backup into /mnt/source
+      - /data/docker:/mnt/source/docker:ro
+      - /data/photo:/mnt/source/photo:ro
+      - /home/andi:/mnt/source/andi:ro
+      # config      
+      - ./conf/borgmatic:/etc/borgmatic.d/
+      - ./conf/ssh:/root/.ssh
+      # state
+      - ./volumes/borg:/root/.config/borg
+      - ./volumes/cache:/root/.cache/borg
+    environment:
+      TZ: Europe/Berlin
+      BORG_PASSPHRASE: ${BORG_PASSPHRASE}
