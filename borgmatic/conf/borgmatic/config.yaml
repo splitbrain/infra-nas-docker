@@ -55,16 +55,16 @@ apprise:
           label: mail
 
     start:
-        title: ⚙️ Started
+        title: "⚙️ Backup nas: started"
         body: Starting backup process.
 
     finish:
-        title: ✅ SUCCESS
+        title: "✅ Backup nas: SUCCESS"
         body: Backups successfully made.
 
     fail:
-        title: ❌ FAILED
+        title: "❌ Backup nas: FAILED"
         body: Your backups have failed.
 
 healthchecks:
-    ping_url: https://hc-ping.com/9c2d87eb-bc44-4ada-8bc7-1c1a2907e0c0
+    ping_url: ${HEALTHCHECKS_PINGURL}
