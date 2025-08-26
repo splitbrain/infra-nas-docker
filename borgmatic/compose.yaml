@@ -17,3 +17,4 @@ services:
     environment:
       TZ: Europe/Berlin
       BORG_PASSPHRASE: ${BORG_PASSPHRASE}
+      HEALTHCHECKS_PINGURL: ${HEALTHCHECKS_PINGURL}
