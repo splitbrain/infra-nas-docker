@@ -17,7 +17,7 @@ services:
       traefik.enable: true
       traefik.http.routers.openwebui.rule: Host(`openwebui.69b.place`)
 
-      homepage.group: Tools
+      homepage.group: Applications
       homepage.name: OpenWebUi
       homepage.description: LLM Chat
       homepage.icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/open-webui-light.svg
