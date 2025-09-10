@@ -1,0 +1,34 @@
+services:
+  books:
+    image: crocodilestick/calibre-web-automated:latest
+    container_name: calibre-web-automated
+    restart: unless-stopped
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Berlin
+      # Hardcover API Key required for Hardcover as a Metadata Provider, get one here: https://docs.hardcover.app/api/getting-started/
+      #- HARDCOVER_TOKEN=your_hardcover_api_key_here
+    volumes:
+      - ./volumes/config:/config 
+      - ./volumes/ingest:/cwa-book-ingest
+      - ./volumes/library:/calibre-library
+      - ./data/other/ebooks:/books
+    networks:
+      - traefik
+
+    labels:
+      traefik.enable: true
+      traefik.http.routers.books.rule: Host(`books.69b.place`)
+      traefik.http.services.books.loadbalancer.server.port: 8083
+
+      homepage.group: Applications
+      homepage.name: Calibre Web Automated
+      homepage.description: E-Book Management
+      homepage.icon: sh-calibre-web.svg
+      homepage.href: https://books.69b.place
+
+networks:
+  traefik:
+    name: traefik
+    external: true
