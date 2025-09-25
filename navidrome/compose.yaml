@@ -5,12 +5,10 @@ services:
     restart: unless-stopped
     user: 1000:100
     environment:
-      - ND_CONFIGFOLDER=/config
       - ND_MUSICFOLDER=/music
       - ND_LOGLEVEL=info
       - ND_BASEURL=/
     volumes:
-      - ./volumes/config:/config
       - ./volumes/data:/data
       - /data/music:/music
     networks:
