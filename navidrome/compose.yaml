@@ -12,7 +12,7 @@ services:
     volumes:
       - ./volumes/config:/config
       - ./volumes/data:/data
-      - /data/music:/music:ro
+      - /data/music:/music
     networks:
       - traefik
     labels:
