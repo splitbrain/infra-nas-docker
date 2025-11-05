@@ -1,0 +1,10 @@
+services:
+  chadburn:
+    image: premoweb/chadburn:1.0.7
+    container_name: chadburn
+    restart: unless-stopped
+    command: daemon
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ./conf/chadburn.conf:/etc/chadburn.conf
+
