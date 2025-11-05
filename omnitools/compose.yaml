@@ -1,0 +1,23 @@
+services:
+  omnitools:
+    image: iib0011/omni-tools:latest
+    container_name: omnitools
+    restart: unless-stopped
+    networks:
+      - traefik
+
+    labels:
+      traefik.enable: true
+      traefik.http.routers.omnitools.rule: Host(`omnitools.69b.place`)
+      traefik.http.services.omnitools.loadbalancer.server.port: 80
+
+      homepage.group: Applications
+      homepage.name: Omni-Tools
+      homepage.description: Various tools
+      homepage.icon: sh-omnitools.png 
+      homepage.href: https://omnitools.69b.place
+
+networks:
+  traefik:
+    name: traefik
+    external: true
