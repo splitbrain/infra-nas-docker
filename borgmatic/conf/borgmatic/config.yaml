@@ -46,8 +46,6 @@ checks:
 
 apprise:
     states:
-        - start
-        - finish
         - fail
 
     services:
