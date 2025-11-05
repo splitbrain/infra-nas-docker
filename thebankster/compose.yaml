@@ -1,0 +1,30 @@
+services:
+  thebankster:
+    image: ghcr.io/splitbrain/thebankster:latest
+    container_name: thebankster
+    restart: unless-stopped
+    user: "1000:100"
+    volumes:
+      - ./volumes/data:/app/data
+    networks:
+      - traefik
+
+    labels:
+      traefik.enable: true
+      traefik.http.routers.thebankster.rule: Host(`thebankster.69b.place`)
+      traefik.http.services.thebankster.loadbalancer.server.port: 80
+
+      chadburn.enabled: "true"                                                                                          
+      chadburn.job-exec.thebankster-import.schedule: "0 23 * * *"                                                        
+      chadburn.job-exec.thebankster-import.command: "php /app/bin/import.php"
+
+      homepage.group: Applications
+      homepage.name: The Bankster
+      homepage.description: Personal Finance
+      homepage.icon: 
+      homepage.href: https://thebankster.69b.place
+
+networks:
+  traefik:
+    name: traefik
+    external: true
