@@ -1,0 +1,31 @@
+services:
+  navidrome:
+    image: deluan/navidrome:latest
+    container_name: navidrome
+    restart: unless-stopped
+    user: 1000:100
+    environment:
+      - ND_MUSICFOLDER=/music
+      - ND_LOGLEVEL=info
+      - ND_BASEURL=/
+      - ND_PID_ALBUM=musicbrainz_albumid|folder
+    volumes:
+      - ./volumes/data:/data
+      - /data/music:/music:ro
+    networks:
+      - traefik
+    labels:
+      traefik.enable: true
+      traefik.http.routers.navidrome.rule: Host(`navidrome.69b.place`)
+      traefik.http.services.navidrome.loadbalancer.server.port: 4533
+
+      homepage.group: Media
+      homepage.name: Navidrome
+      homepage.description: Music Streaming Server
+      homepage.icon: sh-navidrome
+      homepage.href: https://navidrome.69b.place
+
+networks:
+  traefik:
+    name: traefik
+    external: true

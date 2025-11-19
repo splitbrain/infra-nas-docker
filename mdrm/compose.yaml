@@ -1,0 +1,27 @@
+services:
+  mdrm:
+    image: ghcr.io/wow-signal-dev/metadata-remote:latest
+    container_name: mdrm
+    restart: unless-stopped
+    volumes:
+      - /data/music:/music
+    networks:
+      - traefik
+    environment:
+      - PUID=1000
+      - PGID=100
+    labels:
+      traefik.enable: true
+      traefik.http.routers.mdrm.rule: Host(`mdrm.69b.place`)
+      traefik.http.services.mdrm.loadbalancer.server.port: 8338
+
+      homepage.group: Media
+      homepage.name: Metadata
+      homepage.description: MP3 Metadata Editor
+      homepage.icon: sh-metadata-remote.svg
+      homepage.href: https://mdrm.69b.place
+
+networks:
+  traefik:
+    name: traefik
+    external: true
