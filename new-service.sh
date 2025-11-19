@@ -48,7 +48,7 @@ services:
       homepage.group: Applications
       homepage.name: ${SERVICE_NAME^}
       homepage.description: Description
-      homepage.icon: 
+      homepage.icon: sh-$SERVICE_NAME.svg
       homepage.href: https://$SERVICE_NAME.69b.place
 
 networks:
@@ -59,10 +59,3 @@ EOF
 
 echo "Service '$SERVICE_NAME' created successfully!"
 echo "Directory: $SERVICE_DIR"
-echo "Next steps:"
-echo "  1. Edit $SERVICE_DIR/compose.yaml to configure your service"
-echo "  2. Update the image, volumes, and environment variables as needed"
-echo "  3. Adjust Traefik labels (uncomment port if needed)"
-echo "  4. Configure chadburn job schedule and command"
-echo "  5. Update homepage labels (group, name, description, icon)"
-echo "  6. Start the service with: docker compose -f $SERVICE_DIR/compose.yaml up -d"
