@@ -1,6 +1,7 @@
 services:
   pdf:
     image: docker.stirlingpdf.com/stirlingtools/stirling-pdf:latest
+    restart: unless-stopped
     volumes:
       - ./volumes/trainingData:/usr/share/tessdata # Required for extra OCR languages
       - ./volumes/extraConfigs:/configs
@@ -12,18 +13,15 @@ services:
       - LANGS=en_US
     networks:
       - traefik
-
     labels:
       traefik.enable: true
       traefik.http.routers.pdf.rule: Host(`pdf.69b.place`)
       traefik.http.services.pdf.loadbalancer.server.port: 8080
-
       homepage.group: Applications
       homepage.name: Stirling PDF
       homepage.description: PDF Utilities
       homepage.icon: sh-stirling-pdf.svg
       homepage.href: https://pdf.69b.place
-
 networks:
   traefik:
     name: traefik

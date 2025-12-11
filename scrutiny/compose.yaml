@@ -2,6 +2,7 @@ services:
   scrutiny:
     container_name: scrutiny
     image: ghcr.io/analogj/scrutiny:master-omnibus
+    restart: unless-stopped
     cap_add:
       - SYS_RAWIO
       - SYS_ADMIN # required for NVME support
@@ -10,24 +11,20 @@ services:
       - ./volumes/influxdb:/opt/scrutiny/influxdb
       - /run/udev:/run/udev:ro
     devices:
-      - "/dev/nvme0"
-      - "/dev/nvme1"
-      - "/dev/nvme2"
-
+      - /dev/nvme0
+      - /dev/nvme1
+      - /dev/nvme2
     networks:
       - traefik
-
     labels:
       traefik.enable: true
       traefik.http.routers.scrutiny.rule: Host(`scrutiny.69b.place`)
       traefik.http.services.scrutiny.loadbalancer.server.port: 8080
-
       homepage.group: System
       homepage.name: Scrutiny
       homepage.description: SMART Monitoring
       homepage.icon: sh-scrutiny.svg
       homepage.href: https://scrutiny.69b.place
-
 networks:
   traefik:
     name: traefik
