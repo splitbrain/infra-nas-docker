@@ -1,0 +1,31 @@
+services:
+  feishin:
+    image: ghcr.io/jeffvli/feishin:latest
+    container_name: feishin
+    restart: unless-stopped
+    environment:
+            - SERVER_NAME=navidrome
+            - SERVER_LOCK=true
+            - SERVER_TYPE=navidrome
+            - SERVER_URL=https://navidrome.69b.place
+            - PUID=1000
+            - PGID=100
+            - UMASK=002
+            - TZ=Europe/Berlin
+    networks:
+      - traefik
+    labels:
+      traefik.enable: true
+      traefik.http.routers.feishin.rule: Host(`feishin.69b.place`)
+      traefik.http.services.feishin.loadbalancer.server.port: 9180
+
+      homepage.group: Applications
+      homepage.name: Feishin
+      homepage.description: Music Player
+      homepage.icon: sh-feishin.svg
+      homepage.href: https://feishin.69b.place
+
+networks:
+  traefik:
+    name: traefik
+    external: true
