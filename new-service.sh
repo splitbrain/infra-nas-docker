@@ -32,6 +32,7 @@ services:
     image: example/image:latest
     container_name: $SERVICE_NAME
     restart: unless-stopped
+    #user: 1000:100
     volumes:
       - ./volumes/data:/data
     networks:
