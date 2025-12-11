@@ -9,6 +9,8 @@ services:
       - ND_LOGLEVEL=info
       - ND_BASEURL=/
       - ND_PID_ALBUM=musicbrainz_albumid|folder
+      - ND_LASTFM_APIKEY=${LASTFM_APIKEY}
+      - ND_LASTFM_SECRET=${LASTFM_SECRET}
     volumes:
       - ./volumes/data:/data
       - /data/music:/music:ro
