@@ -19,10 +19,10 @@ services:
       traefik.http.routers.feishin.rule: Host(`feishin.69b.place`)
       traefik.http.services.feishin.loadbalancer.server.port: 9180
 
-      homepage.group: Applications
+      homepage.group: Media
       homepage.name: Feishin
       homepage.description: Music Player
-      homepage.icon: sh-feishin.svg
+      homepage.icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/feishin.png
       homepage.href: https://feishin.69b.place
 
 networks:

@@ -16,7 +16,7 @@ services:
       homepage.group: System
       homepage.name: Ofelia
       homepage.description: Scheduled Jobs
-      homepage.icon: sh:ofelia.svg
+      homepage.icon: https://camo.githubusercontent.com/7f2c551d2a3c6af164a47b2d87599cd085404668b3249fecb774b33dbfd4504b/68747470733a2f2f776569726473706163652e646b2f4672616e636973636f4962616e657a2f47726170686963732f4f66656c69612e676966
       homepage.href: https://ofelia.69b.place
 
 networks:

@@ -44,7 +44,7 @@ services:
       homepage.group: Applications
       homepage.name: Notmore.
       homepage.description: Search through mails
-      homepage.icon: fixme.svg
+      homepage.icon: https://raw.githubusercontent.com/splitbrain/notmore/refs/heads/main/public/notmore.svg
       homepage.href: https://notmore.69b.place
 
 networks:
