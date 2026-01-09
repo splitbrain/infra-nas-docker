@@ -1,0 +1,28 @@
+### Remote Config ###
+IMAPStore gmail-remote
+Host imap.gmail.com
+Port 993
+UserCmd "echo $GMAIL_USER"   # from environment
+PassCmd "echo $GMAIL_PASS"   # from environment
+AuthMechs LOGIN
+TLSType IMAPS
+PipelineDepth 1              # Avoid quota errors
+Timeout 60                   # More graceful timeouts
+
+### Local Config ###
+MaildirStore gmail-local
+Path /mail/
+Inbox /mail/INBOX
+SubFolders Verbatim
+
+### Sync Settings ###
+Channel gmail
+Far :gmail-remote:
+Near :gmail-local:
+Patterns *
+SyncState *
+CopyArrivalDate yes          # Don't mess up message timestamps when moving them between folders.
+Sync Pull                    # Download changes only, don't sync local changes up to the server.
+Create Near                  # Automatically create new folders in the local copy.
+Remove Near                  # Automatically remove deleted folders from the local copy.
+Expunge Near                 # Expunge deleted messages from the local copy.

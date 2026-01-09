@@ -1,0 +1,54 @@
+services:
+  mbsync:
+    image: theohbrothers/docker-isync:latest
+    container_name: mbsync
+    restart: unless-stopped
+    user: "1000:100"
+    environment:
+      GMAIL_USER: ${GMAIL_USER}
+      GMAIL_PASS: ${GMAIL_PASS}
+    volumes:
+      - ./volumes/vmail:/mail
+      - ./config/mbsyncrc:/mbsyncrc:ro
+    command: <
+      sh -c 'while true; do
+               echo "[$(date)] Running sync...";
+               /sync;
+               echo "[$(date)] Sync finished. Sleeping...";
+               sleep 1800;
+             done'
+
+  notmore:
+    image: ghcr.io/splitbrain/notmore:latest
+    container_name: notmore
+    restart: unless-stopped
+    user: "1000:100"
+    environment:
+      NOTMUCH_NAME: "Andreas Gohr"
+      NOTMUCH_PRIMARY_EMAIL: "andi@splitbrain.org"
+      NOTMUCH_OTHER_EMAILS: "splitbrain@gmail.com"
+    volumes:
+      - ./volumes/vmail:/mail:ro
+      - ./volumes/notmuch:/notmuch
+    networks:
+      - traefik
+    labels:
+      traefik.enable: true
+      traefik.http.routers.notmore.rule: Host(`notmore.69b.place`)
+      traefik.http.services.notmore.loadbalancer.server.port: 8000
+
+      ofelia.enabled: "true"
+      ofelia.job-exec.notmore-job.schedule: "*/30 * * * *"
+      ofelia.job-exec.notmore-job.command: "notmuch new"
+
+      homepage.group: Applications
+      homepage.name: Notmore.
+      homepage.description: Search through mails
+      homepage.icon: fixme.svg
+      homepage.href: https://notmore.69b.place
+
+networks:
+  traefik:
+    name: traefik
+    external: true
+
