@@ -14,9 +14,9 @@ services:
       traefik.http.routers.thebankster.rule: Host(`thebankster.69b.place`)
       traefik.http.services.thebankster.loadbalancer.server.port: 80
 
-      chadburn.enabled: "true"                                                                                          
-      chadburn.job-exec.thebankster-import.schedule: "0 23 * * *"                                                        
-      chadburn.job-exec.thebankster-import.command: "php /app/bin/import.php"
+      ofelia.enabled: "true"                                                                                          
+      ofelia.job-exec.thebankster-import.schedule: "0 23 * * *"                                                        
+      ofelia.job-exec.thebankster-import.command: "php /app/bin/import.php"
 
       homepage.group: Applications
       homepage.name: The Bankster

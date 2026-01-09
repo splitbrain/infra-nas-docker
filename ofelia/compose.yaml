@@ -1,0 +1,25 @@
+services:
+  ofelia:
+    image: ghcr.io/netresearch/ofelia
+    container_name: ofelia
+    restart: unless-stopped
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ./conf/:/etc/ofelia/
+    networks:
+      - traefik
+    labels:
+      traefik.enable: true
+      traefik.http.routers.ofelia.rule: Host(`ofelia.69b.place`)
+      traefik.http.services.ofelia.loadbalancer.server.port: 8080
+
+      homepage.group: System
+      homepage.name: Ofelia
+      homepage.description: Scheduled Jobs
+      homepage.icon: sh:ofelia.svg
+      homepage.href: https://ofelia.69b.place
+
+networks:
+  traefik:
+    name: traefik
+    external: true
