@@ -40,6 +40,7 @@ services:
       ofelia.enabled: "true"
       ofelia.job-exec.notmore-job.schedule: "*/30 * * * *"
       ofelia.job-exec.notmore-job.command: "notmuch new"
+      ofelia.job-exec.notmore-job.user: "1000:100"
 
       homepage.group: Applications
       homepage.name: Notmore.
