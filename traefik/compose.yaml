@@ -22,7 +22,7 @@ services:
       - "--serversTransport.insecureSkipVerify=true"
       - "--log.level=DEBUG"
       - "--providers.docker=true"
-      - "--providers.docker.network=proxy"
+      - "--providers.docker.network=traefik"
       - "--providers.docker.exposedbydefault=false"
       - "--providers.file.directory=/etc/traefik/dynamic"
       - "--providers.file.watch=true"
