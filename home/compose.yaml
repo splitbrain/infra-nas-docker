@@ -8,6 +8,7 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock # (optional) For docker integrations
     environment:
       HOMEPAGE_ALLOWED_HOSTS: home.69b.place
+      LOG_TARGETS: stdout
     networks:
       - traefik
 

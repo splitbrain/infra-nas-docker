@@ -1,6 +1,6 @@
 services:
   traefik:
-    image: traefik:v3.5
+    image: traefik:v3.7
     container_name: traefik
     restart: unless-stopped
     security_opt:
@@ -22,7 +22,7 @@ services:
       - "--serversTransport.insecureSkipVerify=true"
       - "--log.level=DEBUG"
       - "--providers.docker=true"
-      - "--providers.docker.network=proxy"
+      - "--providers.docker.network=traefik"
       - "--providers.docker.exposedbydefault=false"
       - "--providers.file.directory=/etc/traefik/dynamic"
       - "--providers.file.watch=true"
