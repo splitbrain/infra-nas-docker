@@ -1,23 +1,51 @@
 services:
-  wireguard:
-    image: lscr.io/linuxserver/wireguard:latest
-    container_name: wireguard
+  wg-easy:
+    image: ghcr.io/wg-easy/wg-easy:15
+    container_name: wg-easy
+    restart: unless-stopped
     cap_add:
       - NET_ADMIN
-      - SYS_MODULE #optional
+      - SYS_MODULE
     environment:
       TZ: Europe/Berlin
-      SERVERURL: ${SERVERURL}
-      SERVERPORT: 51820
-      PEERS: mobileAndi,bonkers
-      PEERDNS: auto #optional
-      ALLOWEDIPS: 192.168.1.0/24
-      PERSISTENTKEEPALIVE_PEERS: all
-      LOG_CONFS: true #optional
+      # WireGuard configuration (replicated from original)
+      WG_HOST: ${SERVERURL}
+      WG_PORT: 51820
+      WG_DEFAULT_DNS: 192.168.1.1
+      WG_DEFAULT_ADDRESS: 192.168.1.x
+      WG_ALLOWED_IPS: 192.168.1.0/24
+      WG_PERSISTENT_KEEPALIVE: 25
+      # Web UI configuration
+      PORT: 51821
+      PASSWORD: ${WG_PASSWORD}
+      # Optional features
+      UI_TRAFFIC_STATS: true
+      UI_CHART_TYPE: 2
+      LANG: en
     volumes:
-      - ./volumes/config:/config
-      - /lib/modules:/lib/modules #optional
+      - ./volumes/config:/etc/wireguard
+      - /lib/modules:/lib/modules:ro
     ports:
       - 51820:51820/udp
-    restart: unless-stopped
+      - 51821:51821/tcp
+    sysctls:
+      - net.ipv4.ip_forward=1
+      - net.ipv4.conf.all.src_valid_mark=1
+    networks:
+      - traefik
+    labels:
+      traefik.enable: true
+      traefik.http.routers.wg-easy.rule: Host(`wg-easy.69b.place`)
+      traefik.http.services.wg-easy.loadbalancer.server.port: 51821
+
+      homepage.group: System
+      homepage.name: WireGuard Easy
+      homepage.description: VPN Management
+      homepage.icon: sh-wireguard
+      homepage.href: https://wg-easy.69b.place
+
+networks:
+  traefik:
+    name: traefik
+    external: true
 
