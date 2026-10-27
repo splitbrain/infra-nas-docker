@@ -1,0 +1,28 @@
+services:
+  chores:
+    image: ghcr.io/splitbrain/chores:latest
+    container_name: chores
+    restart: unless-stopped
+    user: 1000:100
+    environment:
+      HA_URL: ${HA_URL}
+      HA_TOKEN: ${HA_TOKEN}
+    volumes:
+      - ./volumes/data:/app/data
+    networks:
+      - traefik
+    labels:
+      traefik.enable: true
+      traefik.http.routers.chores.rule: Host(`chores.69b.place`)
+      traefik.http.services.chores.loadbalancer.server.port: 3000
+
+      homepage.group: Tools
+      homepage.name: Chores
+      homepage.description: Household Chores
+      homepage.icon: mdi-broom
+      homepage.href: https://chores.69b.place
+
+networks:
+  traefik:
+    name: traefik
+    external: true
