@@ -11,11 +11,13 @@ services:
       - /dev/net/tun:/dev/net/tun
     sysctls:
       net.ipv4.ip_forward: 1
+      net.ipv4.conf.all.src_valid_mark: 1
     environment:
       TS_STATE_DIR: /var/lib/tailscale
       TS_USERSPACE: "false"
       TS_ROUTES: 192.168.1.0/24
       TS_EXTRA_ARGS: --advertise-tags=tag:nas
+      TS_DEBUG_FIREWALL_MODE: nftables
     volumes:
       - ./volumes/state:/var/lib/tailscale
     restart: unless-stopped
