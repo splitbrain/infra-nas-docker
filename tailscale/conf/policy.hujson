@@ -12,6 +12,14 @@
 		"exitNode": ["tag:nas"],
 	},
 
+	"nodeAttrs": [
+		// the NAS can make services public with Funnel
+		{
+			"target": ["tag:nas"],
+			"attr":   ["funnel"],
+		},
+	],
+
 	"grants": [
 		// all users can reach the full LAN
 		{

@@ -16,3 +16,14 @@ services:
       WATCHTOWER_NOTIFICATION_EMAIL_SERVER: 192.168.1.33
       WATCHTOWER_NOTIFICATION_EMAIL_SERVER_PORT: 25
       WATCHTOWER_NOTIFICATIONS_HOSTNAME: nas
+      # update API, public at /watchtower/update through the Tailscale Funnel
+      WATCHTOWER_HTTP_API_ENDPOINTS: update
+      WATCHTOWER_HTTP_API_TOKEN: ${WATCHTOWER_TOKEN}
+      WATCHTOWER_HTTP_API_PERIODIC_POLLS: "true"
+    networks:
+      - tailscale
+
+networks:
+  tailscale:
+    name: tailscale
+    external: true
