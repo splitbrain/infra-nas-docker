@@ -24,7 +24,6 @@ services:
     volumes:
       - ./volumes/agentdata:/var/lib/beszel-agent
       - ./config/socket:/beszel_socket
-      - /data:/extra-filesystems/data:ro
       - /var/run/docker.sock:/var/run/docker.sock:ro
     environment:
       LISTEN: /beszel_socket/beszel.sock
@@ -35,6 +34,7 @@ services:
       - /dev/nvme0
       - /dev/nvme1
       - /dev/nvme2
+      - /dev/zfs:/dev/zfs
     cap_add:
       - SYS_RAWIO
       - SYS_ADMIN # required for NVME support
