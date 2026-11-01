@@ -1,4 +1,4 @@
-# Subnet router for remote access to the LAN
+# Subnet router for remote access to the LAN and optional exit node
 # On the first start, the log shows a link to log in to the tailnet.
 services:
   tailscale:
@@ -16,7 +16,7 @@ services:
       TS_STATE_DIR: /var/lib/tailscale
       TS_USERSPACE: "false"
       TS_ROUTES: 192.168.1.0/24
-      TS_EXTRA_ARGS: --advertise-tags=tag:nas
+      TS_EXTRA_ARGS: --advertise-tags=tag:nas --advertise-exit-node
       TS_DEBUG_FIREWALL_MODE: nftables
     volumes:
       - ./volumes/state:/var/lib/tailscale
