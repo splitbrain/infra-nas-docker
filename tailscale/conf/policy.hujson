@@ -1,7 +1,7 @@
 // Tailscale policy file, applied to the tailnet by .github/workflows/tailscale.yml
 {
 	"tagOwners": {
-		// the NAS, acts as subnet router for the LAN
+		// the NAS, acts as subnet router for the LAN and as exit node
 		"tag:nas": ["autogroup:admin"],
 	},
 
@@ -9,6 +9,7 @@
 		"routes": {
 			"192.168.1.0/24": ["tag:nas"],
 		},
+		"exitNode": ["tag:nas"],
 	},
 
 	"grants": [
@@ -16,6 +17,12 @@
 		{
 			"src": ["autogroup:member"],
 			"dst": ["192.168.1.0/24"],
+			"ip":  ["*"],
+		},
+		// all users can use the exit node
+		{
+			"src": ["autogroup:member"],
+			"dst": ["autogroup:internet"],
 			"ip":  ["*"],
 		},
 	],
