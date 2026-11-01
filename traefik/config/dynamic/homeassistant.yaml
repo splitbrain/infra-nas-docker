@@ -1,0 +1,13 @@
+http:
+  routers:
+    homeassistant:
+      rule: Host(`ha.69b.place`)
+      service: homeassistant
+      entryPoints: [web, websecure]
+      tls:
+        certResolver: letsencrypt
+  services:
+    homeassistant:
+      loadBalancer:
+        servers:
+          - url: "http://192.168.1.19:8123"
