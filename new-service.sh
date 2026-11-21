@@ -42,9 +42,10 @@ services:
       traefik.http.routers.$SERVICE_NAME.rule: Host(\`$SERVICE_NAME.69b.place\`)
       # traefik.http.services.$SERVICE_NAME.loadbalancer.server.port: 80
 
-      chadburn.enabled: "true"
-      chadburn.job-exec.$SERVICE_NAME-job.schedule: "0 0 * * *"
-      chadburn.job-exec.$SERVICE_NAME-job.command: "echo 'Example job'"
+      ofelia.enabled: "true"
+      ofelia.job-exec.$SERVICE_NAME-job.schedule: "0 0 * * *"
+      ofelia.job-exec.$SERVICE_NAME-job.command: "echo 'Example job'"
+      # ofelia.job-exec.$SERVICE_NAME-job.user: "1000:100"
 
       homepage.group: Applications
       homepage.name: ${SERVICE_NAME^}
