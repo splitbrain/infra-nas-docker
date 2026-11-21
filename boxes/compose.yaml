@@ -1,0 +1,68 @@
+services:
+  boxes-orchestrator:
+    image: ghcr.io/splitbrain/boxes/orchestrator:latest
+    container_name: boxes-orchestrator
+    user: 1000:100
+    group_add:
+      - 131
+    restart: unless-stopped
+    depends_on:
+      - boxes-egress-proxy
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./volumes/data:/data
+
+    environment:
+      TZ: Europe/Berlin
+      BOX_IMAGE: ghcr.io/splitbrain/boxes/box:latest
+      GITLAB_HOST: gitlab.cosmocode.de
+      BOX_UID: 1000
+      BOX_GID: 100
+
+    labels:
+      traefik.enable: true
+      traefik.http.services.boxes.loadbalancer.server.port: "3000"
+
+      traefik.http.routers.boxes.rule: Host(`boxes.69b.place`)
+      traefik.http.routers.boxes.priority: "10"
+      traefik.http.routers.boxes.service: boxes
+      traefik.http.routers.boxes.tls.certresolver: letsencrypt
+
+      traefik.http.routers.boxes-ws.rule: Host(`boxes.69b.place`) && PathPrefix(`/ws`)
+      traefik.http.routers.boxes-ws.priority: "20"
+      traefik.http.routers.boxes-ws.service: boxes
+      traefik.http.routers.boxes-ws.tls.certresolver: letsencrypt
+
+      homepage.group: Applications
+      homepage.name: Boxes
+      homepage.description: Description
+      homepage.icon: https://raw.githubusercontent.com/splitbrain/boxes/refs/heads/main/dashboard/public/logo.svg
+      homepage.href: https://boxes.69b.place
+
+    networks:
+      - traefik
+      - boxes
+
+  boxes-egress-proxy:
+    image: ghcr.io/splitbrain/boxes/egress-proxy:latest
+    container_name: boxes-egress-proxy
+    restart: unless-stopped
+    read_only: true
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+
+    environment:
+      TZ: Europe/Berlin
+
+    networks:
+      - boxes
+
+networks:
+  traefik:
+    name: traefik
+    external: true
+  boxes:
+    name: boxes
+
