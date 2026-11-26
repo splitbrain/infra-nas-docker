@@ -15,9 +15,12 @@ services:
     environment:
       TZ: Europe/Berlin
       BOX_IMAGE: ghcr.io/splitbrain/boxes/box:latest
-      GITLAB_HOST: gitlab.cosmocode.de
+      GITLAB_HOST: ${GITLAB_HOST}
       BOX_UID: 1000
       BOX_GID: 100
+      # The egress proxy uses the network namespace of the NetBird container
+      EGRESS_PROXY_CONTAINER: boxes-netbird
+      EGRESS_CONTROL_URL: http://boxes-netbird:3129
 
     labels:
       traefik.enable: true
@@ -43,6 +46,29 @@ services:
       - traefik
       - boxes
 
+  # Connects the egress proxy to the company NetBird network
+  # Watchtower must not update this container, because the egress proxy then loses its network
+  boxes-netbird:
+    image: netbirdio/netbird:latest
+    container_name: boxes-netbird
+    hostname: nas-boxes
+    restart: unless-stopped
+    cap_add:
+      - NET_ADMIN
+      - SYS_ADMIN
+      - SYS_RESOURCE
+    devices:
+      - /dev/net/tun
+    environment:
+      NB_MANAGEMENT_URL: ${NETBIRD_MANAGEMENT_URL}
+      NB_SETUP_KEY: ${NETBIRD_SETUP_KEY}
+    volumes:
+      - ./volumes/netbird:/var/lib/netbird
+    labels:
+      com.centurylinklabs.watchtower.enable: "false"
+    networks:
+      - boxes
+
   boxes-egress-proxy:
     image: ghcr.io/splitbrain/boxes/egress-proxy:latest
     container_name: boxes-egress-proxy
@@ -56,8 +82,9 @@ services:
     environment:
       TZ: Europe/Berlin
 
-    networks:
-      - boxes
+    network_mode: service:boxes-netbird
+    depends_on:
+      - boxes-netbird
 
 networks:
   traefik:
