@@ -66,3 +66,4 @@ apprise:
 
 healthchecks:
     ping_url: ${HEALTHCHECKS_PINGURL}
+    send_logs: true
